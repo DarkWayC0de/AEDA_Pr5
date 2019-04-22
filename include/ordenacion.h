@@ -18,14 +18,29 @@ void Selec(std::vector<T> &v,int start,int end){
       }
     }
     swap(v[mid],v[i]);
-
   }
 }
 
 
 template <class T>
-void Insert_Sac(std::vector<T> &v,int start,int end){
-  //TODO Implementar Insert_Sac
+void Inter_Sac(std::vector<T> &v,int start,int end){
+  int inicio=start+1,final=end,cadidato=end;
+  while(inicio<final){
+    for (int i = final; i >=inicio ; i--) {
+      if(v[i]<v[i-1]){
+        swap(v[i],v[i-1]);
+        cadidato=i;
+      }
+    }
+    inicio =cadidato +1;
+    for (int j = inicio; j <= final ; j++) {
+      if(v[j]<v[j-1]){
+        swap(v[j],v[j-1]);
+        cadidato=j;
+      }
+    }
+    final=cadidato-1;
+  }
 }
 
 template <class T>
