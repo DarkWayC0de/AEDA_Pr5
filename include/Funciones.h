@@ -21,4 +21,12 @@ void ordenarv(std::vector<T> v1,int start1,int end1,std::vector<T> v2,int start2
   }
 }
 
+
+template<class T>
+void swap(T &a,T &b){
+  T aux =a;
+  a = b;
+  b = aux;
+}
+
 #endif //PR5_FUNCIONES_H

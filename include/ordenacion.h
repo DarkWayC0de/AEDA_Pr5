@@ -10,8 +10,19 @@
 
 template <class T>
 void Selec(std::vector<T> &v,int start,int end){
-  //TODO Implementar selec
+  for (int i = start; i<end; ++i){
+    int mid=i;
+    for (int j= i+1; j<end + 1; ++j) {
+      if (v[j] < v[mid]) {
+        mid = j;
+      }
+    }
+    swap(v[mid],v[i]);
+
+  }
 }
+
+
 template <class T>
 void Insert_Sac(std::vector<T> &v,int start,int end){
   //TODO Implementar Insert_Sac
