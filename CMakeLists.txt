@@ -3,6 +3,6 @@ project(pr5)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(pr5 src/main.cpp include/ordenacion.h include/Funciones.h)
+add_executable(pr5 src/main.cpp include/Ordenacion.h include/Funciones.h include/DNI.h src/DNI.cpp)
 
-add_executable(testpr5 src/test/maintext.cpp include/Funciones.h)
+add_executable(testpr5 src/test/maintext.cpp include/Funciones.h include/Ordenacion.h)

@@ -28,5 +28,17 @@ void swap(T &a,T &b){
   a = b;
   b = aux;
 }
+template <class T>
+void mostrado_comparacion(std::vector<T> &v, T el1, T el2){
+  for (int i = 0; i <v.size() ; ++i) {
+    if(v[i]==el1 || v[i]==el2){
+      std::cout << "\t[" << v[i]<<"]";
+    }else {
+      std::cout << "\t" << v[i] ;
+    }
+  }
+  std::cout<<"\n";
+}
+
 
 #endif //PR5_FUNCIONES_H
